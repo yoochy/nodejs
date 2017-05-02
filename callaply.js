@@ -2,11 +2,12 @@ var pet = {
 	words:'....',
 	speak:function(say){
 
-		console.log(say+''+this.words)
+		console.log(this.words)
 	}
 }
-pet.speak('Speak')
+// pet.speak('Speak')
 
-// var dog = {
-// 	words:'Wangwang'
-// }
+var dog = {
+	words:'Wangwang'
+}
+pet.speak.call(dog,'Speak')
