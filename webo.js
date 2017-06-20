@@ -9,11 +9,12 @@ http.get(url,function(res) {
 		html += data
 	})
 	res.on('end',function(){
-		var $ =cheerio.load(html)
-	
-	console.log(this)
-	
-	})
-}).on('error',function(){
+		var t = $('html').find('script').text();
+
+        console.log(t);
+        
+    
+})
+	}).on('error',function(){
 	console.log('获取课程数据出错')
 })
